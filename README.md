@@ -1,12 +1,12 @@
-# fish-alias-search
-A tiny Fish shell plugin to search aliases and abbreviations
+# fish-abbreviation-helper
+A tiny Fish shell plugin to search & manage abbreviations
 
 ## Installation
 
 Use your favourite package manager, I will use [fisher](https://github.com/jorgebucaran/fisher)
 
 ```sh
-fisher install 'kieo-ch/fish-alias-search'
+fisher install 'kieo-ch/fish-abbreviation-helper'
 ```
 
 ## Usage
