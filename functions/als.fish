@@ -1,4 +1,4 @@
-
+# FIXME: Fix 0 found bug
 function als -d "List all aliases"
     set -a triggers $(alias | grep "$argv" | cut -d' ' -f2)
     set -a triggers $(abbr | grep "$argv" | cut -d' ' -f4)
@@ -13,7 +13,9 @@ function als -d "List all aliases"
         end
     end
 
-    for i in (seq (count $triggers))
-        printf "%$(echo -n $max_length)s: %s\n" $triggers[$i] $(echo $cmds[$i] | sed "s/^'//;s/'\$//")
-    end | grep "$argv"
+    if test (count $triggers) -gt 0
+        for i in (seq (count $triggers))
+            printf "%$(echo -n $max_length)s: %s\n" $triggers[$i] $(echo $cmds[$i] | sed "s/^'//;s/'\$//")
+        end | grep "$argv"
+    end
 end
