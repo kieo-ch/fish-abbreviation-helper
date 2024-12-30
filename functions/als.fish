@@ -13,7 +13,6 @@ function als -d "List all aliases"
         end
     end
 
-    echo
     for i in (seq (count $triggers))
         printf "%$(echo -n $max_length)s: %s\n" $triggers[$i] $(echo $cmds[$i] | sed "s/^'//;s/'\$//")
     end | grep "$argv"
