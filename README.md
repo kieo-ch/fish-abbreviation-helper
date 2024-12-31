@@ -2,7 +2,6 @@
 A tiny Fish shell plugin to search & manage abbreviations
 
 ## Installation
-
 Use your favourite package manager, I will use [fisher](https://github.com/jorgebucaran/fisher)
 
 ```sh
@@ -10,7 +9,6 @@ fisher install 'kieo-ch/fish-abbreviation-helper'
 ```
 
 ## Usage
-
 **Listing/searching abbreviations and aliases**
 ```sh
 als     # lists all aliases & abbreviations
@@ -29,3 +27,6 @@ add-abbr vf 'vim ~/.config/fish/config.fish' # permanently adds the abbreviation
 remove-abbr vf # permanently removes the abbreviation
 ```
 
+### Notes
+
+* Abbreviations are appended to `~/.config/fish/conf.d/abbreviations.fish`.
